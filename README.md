@@ -47,24 +47,17 @@ cars {
 
 
 ## Requirements: 
-1. When users send a GET request to /cars you should do the following: 
+1. When users send a `GET` request to `/cars` you should do the following: 
   * Read all the available cars and send a JSON response with the car specification details (brand, type, year, status and rate per day). 
- 
 2. When users submit their reservation details (name, driving license), you will receive their data through a `POST` request to `/cars/:id/reserve`. Perform the following: 
   * Get the last mileage on the car from the last rental record and use it as start_mileage. 
   * Insert a new reservation record with all (name, driving license, start_mileage and a new generated reservation_id). 
   * Upon success, send them their confirmation id as JSON  
 `{success:1, reservation_id: ObjectId(093884520389387456398475639)} `
-
-
-
 3. When users send their total number of rental days and end mileage value in a `PATCH` request to `/cars/:id/reserve/:reservation_id`. Perform the following: 
   * Update the rental record with the received data along with the total rent. 
   * Upon success: send the user the following JSON response: 
 `{success:1, total_rent: 225}`
-
-
-
 4. When users send a DELETE request to `/cars/:id/reserve/:reservation_id`  you should do the following: 
   * Remove the rental record from the DB. 
 

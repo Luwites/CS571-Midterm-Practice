@@ -67,4 +67,4 @@ cars {
   
   
 ## React Programming Question
-Create a react component for the third requirement of the cars rental API. Your component will send the total number of rental days and end mileage to the backend API and display the total fees clients must pay after it receives the response from the backend.
+Create a react component `ReturnRental` within `index.html` that support the UI for the third requirement of the cars rental API. Your component will send a form of the total number of rental days and end mileage to the backend API and display the total fees clients must pay after it receives the response from the backend (total rent).

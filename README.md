@@ -66,4 +66,5 @@ cars {
 * There is no need to handle any input validation or add any security configuration in your application. 
   
   
-[Click here to see React Programming Question](./react.md)
+## React Programming Question
+Create a react component for the third requirement of the cars rental API. Your component will send the total number of rental days and end mileage to the backend API and display the total fees clients must pay after it receives the response from the backend.

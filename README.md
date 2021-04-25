@@ -51,7 +51,7 @@ cars {
   * Read all the available cars and send a JSON response with the car specification details (brand, type, year, status and rate per day). 
 2. When users submit their reservation details (name, driving license), you will receive their data through a `POST` request to `/cars/:id/reserve`. Perform the following: 
   * Get the last mileage on the car from the last rental record and use it as start_mileage. 
-  * Insert a new reservation record with all (name, driving license, start_mileage and a new generated reservation_id). 
+  * Insert a new reservation record with all (name, driving license, start_mileage and a new generated reservation_id). Calling `ObjectId()` will generate a new ID.
   * Upon success, send them their confirmation id as JSON  
 `{success:1, reservation_id: ObjectId(093884520389387456398475639)} `
 3. When users send their total number of rental days and end mileage value in a `PATCH` request to `/cars/:id/reserve/:reservation_id`. Perform the following: 
@@ -63,7 +63,7 @@ cars {
 
 **Note:**
 * You are required to use Express Router and complete the code in both `app.js` and `/routes/cars.js` files. 
-* There is no need to handle any input validation or add any security configuration in your application. 
+* There is no need to handle any input validation or add any security configuration to your application. 
   
   
 ## React Programming Question

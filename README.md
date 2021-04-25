@@ -25,9 +25,9 @@ Example:
 ```javascript
 cars {
    _id: ObjectId(09384572039845203894752038942570), 
-   brand: "Toyota", 
-   type: "Camry", 
-   year: "2017", 
+   brand: "Ford", 
+   type: "Explorer", 
+   year: "2019", 
    rate_per_day: 45, 
    status: 1, 
    rental_details: [

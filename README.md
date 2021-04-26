@@ -47,18 +47,10 @@ cars {
 
 
 ## Requirements: 
-1. When users send a `GET` request to `/cars` you should do the following: 
-  * Read all the available cars and send a JSON response with the car specification details (brand, type, year, status and rate per day). 
-2. When users submit their reservation details (name, driving license), you will receive their data through a `POST` request to `/cars/:id/reserve`. Perform the following: 
-  * Get the last mileage on the car from the last rental record and use it as start_mileage. 
-  * Insert a new reservation record with all (name, driving license, start_mileage and a new generated reservation_id). Calling `ObjectId()` will generate a new ID.
-  * Upon success, send them their confirmation id as JSON  
-`{success:1, reservation_id: ObjectId(093884520389387456398475639)} `
-3. When users send their total number of rental days and end mileage value in a `PATCH` request to `/cars/:id/reserve/:reservation_id`. Perform the following: 
+1. When a `PATCH` request is sent to `/cars/:id/reserve/:reservation_id`, users will send their total number of rental days and end-mileage value. Perform the following: 
   * Update the rental record with the received data along with the total rent. 
-  * Upon success: send the user the following JSON response: 
-`{success:1, total_rent: 225}`
-4. When users send a DELETE request to `/cars/:id/reserve/:reservation_id`  you should do the following: 
+  * Upon success: send the user the following JSON response: `{success:1, total_rent: 225}`
+2. When users send a DELETE request to `/cars/:id/reserve/:reservation_id`  you should do the following: 
   * Remove the rental record from the DB. 
 
 **Note:**
@@ -67,4 +59,4 @@ cars {
   
   
 ## React Programming Question
-Update `index.html` to create a React component `ReturnRental` that provides the UI for the third requirement of the cars rental API. Your component will send a form of the total number of rental days and end mileage to the backend API and display the total fees clients must pay after it receives the response from the backend (total rent).
+Update `index.html` to create a React component `ReturnRental` that provides the UI for the first backend route of the cars rental API. Your component will send a form of the total number of rental days and end mileage to the backend API, when submitted, hide the form and display the total fees clients must pay after it receives the response from the backend (total rent).
